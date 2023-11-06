@@ -1,0 +1,69 @@
+@mixin details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .player {
+    width: 100vw;
+    height: 100vh;
+    @include details;
+    background-image: url('../assets/background.avif');
+    background-color: white;
+    background-repeat: repeat;
+    background-size: 100%, 100%;
+    overflow-x: hidden;
+  }
+  .player__body {
+    @include details;
+    border: 2px solid black;
+    width: 40%;
+    height: 20%;
+    flex-direction: row;
+  }
+  .box {
+    @include details;
+    height: 100%;
+    grid-gap: 10px;
+  }
+  .switch {
+    width: 20%;
+    flex-direction: column;
+  }
+  .music {
+    width: 50%;
+    flex-direction: column;
+  }
+  .music__audioName {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .music__progress {
+    padding: 4%;
+    width: 100%;
+    margin: 2%;
+  }
+  .animation {
+    width: 40%;
+    flex-direction: row;
+  }
+  img.rot {
+    animation: 1s linear 0s normal none infinite running rot;
+    -webkit-animation: 1s linear 0s normal none infinite running rot;
+    width: 100px;
+  }
+  @keyframes rot {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes rot {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
